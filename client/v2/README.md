@@ -17,7 +17,7 @@ client.MachineInfo()
 
 There is no v2 MachineInfo API, so the v2 client exposes the [v1 MachineInfo](../../info/v1/machine.go#L131)
 
-```
+```go
 (*v1.MachineInfo)(0xc208022b10)({
  NumCores: (int) 4,
  MemoryCapacity: (int64) 2106028032,
@@ -48,7 +48,7 @@ client.Attributes()
 
 This method returns a [cadvisor/info/v2/Attributes](../../info/v2/machine.go#L24) struct with all the fields filled in. Attributes includes hardware attributes (as returned by MachineInfo) as well as software attributes (eg. software versions). Here is an example return value:
 
-```
+```go
 (*v2.Attributes)({
  KernelVersion: (string) (len=17) "3.13.0-44-generic"
  ContainerOsVersion: (string) (len=18) "Ubuntu 14.04.1 LTS"
@@ -66,4 +66,3 @@ This method returns a [cadvisor/info/v2/Attributes](../../info/v2/machine.go#L24
 ```
 
 You can see the full specification of the [Attributes struct in the source](../../info/v2/machine.go#L24)
-

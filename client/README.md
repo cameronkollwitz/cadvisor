@@ -8,7 +8,6 @@ client, err := client.NewClient("http://192.168.59.103:8080/")
 
 Obviously, replace the URL with the path to your actual cAdvisor REST endpoint.
 
-
 ### MachineInfo
 
 ```go
@@ -17,7 +16,7 @@ client.MachineInfo()
 
 This method returns a cadvisor/v1.MachineInfo struct with all the fields filled in.  Here is an example return value:
 
-```
+```go
 (*v1.MachineInfo)(0xc208022b10)({
  NumCores: (int) 4,
  MemoryCapacity: (int64) 2106028032,
